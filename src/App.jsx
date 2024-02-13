@@ -12,9 +12,8 @@ export default function Home() {
   return (
     <Routes>
       <Route path="/" element={<NavBar/>}>
-        <Route path="/" element={<Ico/>}/>
         <Route path="/stake" element={<Staking/>}/>
-        <Route path="/sell" element={<Sell/>}/>
+        <Route path="/" element={<Sell/>}/>
         <Route path="/marketplace" element={<Marketplace/>}/>
       </Route>
     </Routes>

@@ -4,7 +4,7 @@ import LOGO from '../assets/logo.png';
 
 import { ConnectWallet } from '@thirdweb-dev/react';
 import { Link, Outlet } from 'react-router-dom';
-  
+import logoFinal from '../../src/logo.jpeg'
 export default function NavBar() {
   
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -14,35 +14,10 @@ export default function NavBar() {
         <Container py={4} maxW={"1200px"}>
             <Flex direction={"row"} justifyContent={"space-between"} alignItems={"center"}>
                 <HStack spacing={8} alignItems={'center'}>
-                    <Image 
-                        src={LOGO} 
-                        alt='BeatHard'
-                        w='140px'
-                    />
+                
+                <Image w={40} borderRadius={100} src={logoFinal}></Image>
             </HStack>
-            <HStack
-                as={'nav'}
-                spacing={4}
-                display={{ base: 'none', md: 'flex' }}>
-                <Link to={"/"}>
-                    <Text fontSize={"lg"} fontWeight={"semibold"} color={"white"}>ICO</Text>
-                </Link>
-                <Link to={"/sell"}>
-                    <Text fontSize={"lg"} fontWeight={"semibold"} color={"white"}>Sell BH</Text>
-                </Link>
-                <Link to={"/marketplace"}>
-                    <Text fontSize={"lg"} fontWeight={"semibold"} color={"white"}>Marketplace</Text>
-                </Link>
-                <Link to={"/swap"}>
-                    <Text fontSize={"lg"} fontWeight={"semibold"} color={"white"}>Swap</Text>
-                </Link>
-                <Link to={"/stake"}>
-                    <Text fontSize={"lg"} fontWeight={"semibold"} color={"white"}>Stake</Text>
-                </Link>
-                <Flex display={{ base: 'none', md: 'flex' }} mx={2}>
-                    <ConnectWallet/>
-                </Flex>
-            </HStack>
+          
             <IconButton
               size={'md'}
               icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
