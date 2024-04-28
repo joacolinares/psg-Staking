@@ -19,7 +19,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <ThirdwebProvider
-        clientId={import.meta.env.VITE_TEMPLATE_CLIENT_ID}
+        clientId={"95347962d3e713129610a9c9f4dbce58"}
         activeChain={activeChain}
       >
         <ChakraProvider>
